@@ -1,0 +1,1068 @@
+fileFormatVersion: 2
+guid: 4d4036b652d254f4ebcf81621165f381
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8659967795733985652
+    second: ChefFront1
+  - first:
+      213: 9132761871714352387
+    second: ChefFront2
+  - first:
+      213: -4962998731811428430
+    second: ChefFront3
+  - first:
+      213: -7424640068259177368
+    second: ChefFront4
+  - first:
+      213: -750073980588110029
+    second: ChefFront5
+  - first:
+      213: 5613839511659666059
+    second: ChefBack1
+  - first:
+      213: -1020685492436931006
+    second: ChefBack2
+  - first:
+      213: -3943164915416373465
+    second: ChefBack3
+  - first:
+      213: -6599067445382797288
+    second: ChefBack4
+  - first:
+      213: 1568486390110520766
+    second: ChefBack5
+  - first:
+      213: -2063345509717229973
+    second: ChefLeft1
+  - first:
+      213: -1776417083193287849
+    second: ChefLeft2
+  - first:
+      213: -7602796261314042457
+    second: ChefLeft3
+  - first:
+      213: 8391140365998868941
+    second: ChefLeft4
+  - first:
+      213: 6920556148370012996
+    second: ChefLeft5
+  - first:
+      213: -5224059456697622727
+    second: ChefRight1
+  - first:
+      213: -1795873373680177992
+    second: ChefRight2
+  - first:
+      213: -293020083021637776
+    second: ChefRight3
+  - first:
+      213: -1822420687586159536
+    second: ChefRight4
+  - first:
+      213: 4822297420427764442
+    second: ChefRight5
+  - first:
+      213: 7389084341746079409
+    second: ChefAttackFront1
+  - first:
+      213: 5076134726522077478
+    second: ChefAttackFront2
+  - first:
+      213: -1412188282444018556
+    second: ChefAttackFront3
+  - first:
+      213: -4280807678697492900
+    second: ChefAttackFront4
+  - first:
+      213: -2123972830741086751
+    second: ChefAttackFront5
+  - first:
+      213: -6906710087968473754
+    second: ChefAttackBack2
+  - first:
+      213: 3640957220599631926
+    second: ChefAttackBack3
+  - first:
+      213: 1892233249316459712
+    second: ChefAttackBack4
+  - first:
+      213: -1879045646057893581
+    second: ChefAttackBack5
+  - first:
+      213: -1739965161863155646
+    second: ChefAttackBack1
+  - first:
+      213: 6671863702431432602
+    second: ChefAttackLeft1
+  - first:
+      213: 1302314028821758121
+    second: ChefAttackLeft2
+  - first:
+      213: -577958206993470396
+    second: ChefAttackLeft3
+  - first:
+      213: 8174594473417100679
+    second: ChefAttackLeft4
+  - first:
+      213: -3079354499357115599
+    second: ChefAttackLeft5
+  - first:
+      213: -7548869595594466330
+    second: ChefAttackRight1
+  - first:
+      213: -8624609017845230044
+    second: ChefAttackRight2
+  - first:
+      213: -7912441089938346757
+    second: ChefAttackRight3
+  - first:
+      213: -5978220726606862709
+    second: ChefAttackRight4
+  - first:
+      213: -3821733934816945785
+    second: ChefAttackRight5
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChefFront1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 471
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479fb07e3d26e2870800000000000000
+      internalID: 8659967795733985652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefFront2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 470
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30df3cde8861ebe70800000000000000
+      internalID: 9132761871714352387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefFront3
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 471
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b76aa1d2f2ef1bb0800000000000000
+      internalID: -4962998731811428430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefFront4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 470
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c9742023166f890800000000000000
+      internalID: -7424640068259177368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefFront5
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 471
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f48cf40b33795f0800000000000000
+      internalID: -750073980588110029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefBack1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 407
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ad68eda4d58ed40800000000000000
+      internalID: 5613839511659666059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefBack2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 407
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ee6e3d3fbc5d1f0800000000000000
+      internalID: -1020685492436931006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefBack3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 405
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727e2d5b6601749c0800000000000000
+      internalID: -3943164915416373465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefBack4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 407
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8182d1d2f176b64a0800000000000000
+      internalID: -6599067445382797288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefBack5
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 405
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb58295cf0264c510800000000000000
+      internalID: 1568486390110520766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefLeft1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 342
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e3864e0368d53e0800000000000000
+      internalID: -2063345509717229973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefLeft2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 342
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b145f1316e857e0800000000000000
+      internalID: -1776417083193287849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefLeft3
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 342
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a565b8e4117d7690800000000000000
+      internalID: -7602796261314042457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefLeft4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 342
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9cdc764b1537470800000000000000
+      internalID: 8391140365998868941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefLeft5
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 342
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b7db77621ca0060800000000000000
+      internalID: 6920556148370012996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefRight1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 278
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f94063a996087b0800000000000000
+      internalID: -5224059456697622727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefRight2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 280
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bce53c7ea6c317e0800000000000000
+      internalID: -1795873373680177992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefRight3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 278
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077907779cbfeebf0800000000000000
+      internalID: -293020083021637776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefRight4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 280
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0549a1d4a0675b6e0800000000000000
+      internalID: -1822420687586159536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefRight5
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 278
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad221e944fd3ce240800000000000000
+      internalID: 4822297420427764442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackFront1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 215
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b61d2d4f0d4b8660800000000000000
+      internalID: 7389084341746079409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackFront2
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 214
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6218f56a3ad027640800000000000000
+      internalID: 5076134726522077478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackFront3
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 197
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c84fc3d36e66ce0800000000000000
+      internalID: -1412188282444018556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackFront4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 198
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ea87fc8148794c0800000000000000
+      internalID: -4280807678697492900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackFront5
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 199
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edb817b6f12682e0800000000000000
+      internalID: -2123972830741086751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackBack2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 149
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d3800b4cf6620a0800000000000000
+      internalID: -6906710087968473754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackBack3
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 149
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6301c303d47478230800000000000000
+      internalID: 3640957220599631926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackBack4
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 149
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4d0b16d10924a10800000000000000
+      internalID: 1892233249316459712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackBack5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 149
+        width: 35
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33199f5c0f94ce5e0800000000000000
+      internalID: -1879045646057893581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackBack1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 145
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240779d67e66ad7e0800000000000000
+      internalID: -1739965161863155646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackLeft1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 85
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f7f3530b8379c50800000000000000
+      internalID: 6671863702431432602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackLeft2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 86
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0cde195bfb21210800000000000000
+      internalID: 1302314028821758121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackLeft3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 73
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ce129a21eaaf7f0800000000000000
+      internalID: -577958206993470396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackLeft4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 74
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dc5eadc5ef17170800000000000000
+      internalID: 8174594473417100679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackLeft5
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 75
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b7150e56fe345d0800000000000000
+      internalID: -3079354499357115599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackRight1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 22
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb58d239170d3790800000000000000
+      internalID: -7548869595594466330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackRight2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 22
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42654bc1bcb3f4880800000000000000
+      internalID: -8624609017845230044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackRight3
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 9
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc250820cc513290800000000000000
+      internalID: -7912441089938346757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackRight4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 10
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8668b15ce7190da0800000000000000
+      internalID: -5978220726606862709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChefAttackRight5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 11
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7891e251c3976fac0800000000000000
+      internalID: -3821733934816945785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
