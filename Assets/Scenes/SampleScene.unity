@@ -228,7 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6714264e33500a44dbaee507424095da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textValue: 
+  textValue: '"Rarthoth Cooking" by Fxy licensed CC-BY 4.0 or CC0: https://opengameart.org/content/rarthoth-cooking                                                 
+    check out Fxy''s game at https://fxy.itch.io/luncheon-dungeon'
   textElement: {fileID: 1657474863}
 --- !u!20 &519420031
 Camera:
