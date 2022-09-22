@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8760681203449454855}
   - component: {fileID: 8760681203449454848}
   - component: {fileID: 8760681203449454860}
-  - component: {fileID: 8760681203449454854}
+  - component: {fileID: 1543680540}
   m_Layer: 0
   m_Name: ChefFront1
   m_TagString: Untagged
@@ -143,7 +143,7 @@ Animator:
   m_GameObject: {fileID: 8760681203449454861}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5a7af91e74ba63d48be491ff9a09310e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4f1964edd8b21fb4389a4238a1c6be7d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -152,7 +152,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8760681203449454854
+--- !u!114 &1543680540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,11 +161,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8760681203449454861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d75a36f50fce9d14aabd0c5e12f10e2d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ab836b70bd7f2a4b9996a8e2538e8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 0}
   animator: {fileID: 0}
-  delay: 0.3
-  attackBlocked: 0

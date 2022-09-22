@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //monobehaviour - unity inherited class for working between unity and visual studio
-public class ChefMovement : MonoBehaviour
+public class ChefMovement2 : MonoBehaviour
 {
     //sets speed/force for movement
     public float moveSpeed = 5f;
     //create rigidbody and animator to be set to the ones on the sprite in the inspector
     public Rigidbody2D rb;
     public Animator animator;
-
-    //delay for attack
-    public float delay = 0.3f;
-    public bool attackBlocked;
 
     //Vector to track movement
     Vector2 movement;
@@ -80,20 +76,9 @@ public class ChefMovement : MonoBehaviour
     {
         //matches idle float for correct direction attack animation
         animator.SetFloat("Attack", animator.GetFloat("IdleFace"));
-        if (Input.GetButtonDown("Jump") && !animator.GetBool("IsAttacking"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            //set attack boolean to true
-            animator.SetBool("IsAttacking", true);
             animator.Play("Attack");
-            
         }
-        //makes sure attack boolean gets set back to false after a delay
-        Invoke("ResetAttack", delay);
-    }
-
-    //method to reset attack boolean
-    void ResetAttack()
-    {
-        animator.SetBool("IsAttacking", false);
     }
 }
