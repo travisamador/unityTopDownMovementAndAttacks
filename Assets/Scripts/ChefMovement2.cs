@@ -10,9 +10,19 @@ public class ChefMovement2 : MonoBehaviour
     //create rigidbody and animator to be set to the ones on the sprite in the inspector
     public Rigidbody2D rb;
     public Animator animator;
+    public Transform playerPosition;
 
     //Vector to track movement
     Vector2 movement;
+
+    //add transform for attackBox position
+    public Transform AttackBox;
+    //set attack range
+    public float attackRange = .05f;
+    //set how much damage attack does
+    public int attackDamage = 25;
+    //create layermask to detect enemies hit
+    public LayerMask enemyLayers;
 
     //awake is called first when game object is instantiated
     private void Awake()
@@ -20,6 +30,7 @@ public class ChefMovement2 : MonoBehaviour
         //set rigidbody and animator to match the ones on the sprite in unity
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerPosition = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -39,7 +50,10 @@ public class ChefMovement2 : MonoBehaviour
         //sets direction for idle
         IdleFace();
         //sets attack direction and enables attack
-        Attack();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Attack();
+        }
     }
 
     void FixedUpdate()
@@ -54,21 +68,25 @@ public class ChefMovement2 : MonoBehaviour
         if (movement.x > 0)
         {
             animator.SetFloat("IdleFace", 1f);
+            AttackBox.localPosition = new Vector3(0.071f, -0.015f, 0f);
         }
         else if (movement.x < 0)
         {
             //set idle going to the left side
             animator.SetFloat("IdleFace", 0.66f);
+            AttackBox.localPosition = new Vector3(-0.071f, 0.015f, 0f);
         }
         else if (movement.y > 0)
         {
             //set idle going up
             animator.SetFloat("IdleFace", 0.33f);
+            AttackBox.localPosition = new Vector3(-0.023f, 0.04f, 0f);
         }
         else if (movement.y < 0)
         {
             //set idle going down
             animator.SetFloat("IdleFace", 0f);
+            AttackBox.localPosition = new Vector3(0.032f, -0.047f, 0f);
         }
     }
 
@@ -76,9 +94,25 @@ public class ChefMovement2 : MonoBehaviour
     {
         //matches idle float for correct direction attack animation
         animator.SetFloat("Attack", animator.GetFloat("IdleFace"));
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
             animator.Play("Attack");
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackBox.position, attackRange, enemyLayers);
+            //Damage them
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                Debug.Log("We hit " + enemy.name);
+                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
+        //}
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (AttackBox == null)
+        {
+            return;
         }
+        Gizmos.DrawWireSphere(AttackBox.position, attackRange); 
     }
 }
