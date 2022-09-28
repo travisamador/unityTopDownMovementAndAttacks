@@ -10,8 +10,6 @@ public class ChefMovement2 : MonoBehaviour
     //create rigidbody and animator to be set to the ones on the sprite in the inspector
     public Rigidbody2D rb;
     public Animator animator;
-    public Transform playerPosition;
-
     //Vector to track movement
     Vector2 movement;
 
@@ -24,13 +22,21 @@ public class ChefMovement2 : MonoBehaviour
     //create layermask to detect enemies hit
     public LayerMask enemyLayers;
 
+    public int maxHealth = 100;
+    int currentHealth;
+    public bool isDead = false;
+
     //awake is called first when game object is instantiated
     private void Awake()
     {
         //set rigidbody and animator to match the ones on the sprite in unity
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        playerPosition = GetComponent<Transform>();
+    }
+
+    void Start()
+    {
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -113,6 +119,30 @@ public class ChefMovement2 : MonoBehaviour
         {
             return;
         }
+        //draw circle around attack box when player is selected in hierarchy
         Gizmos.DrawWireSphere(AttackBox.position, attackRange); 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        //subtract enemy damage from health
+        currentHealth -= damage;
+        //player dies if health hits 0
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Player died!");
+        isDead = true;
+        //stop collisions
+        GetComponent<Collider2D>().enabled = false;
+        //remove sprite from screen
+        GetComponent<SpriteRenderer>().enabled = false;
+        //disable this script
+        this.enabled = false;
     }
 }

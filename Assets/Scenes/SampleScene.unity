@@ -7020,6 +7020,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &358337352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1543680540, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
+  m_PrefabInstance: {fileID: 2143581758}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab836b70bd7f2a4b9996a8e2538e8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &376679991
 GameObject:
   m_ObjectHideFlags: 0
@@ -19636,6 +19647,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &915161244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 915161245}
+  m_Layer: 11
+  m_Name: EnemyAttackBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &915161245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915161244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.013, y: -0.084, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1959990089}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &915890665
 GameObject:
   m_ObjectHideFlags: 0
@@ -42538,6 +42579,7 @@ GameObject:
   - component: {fileID: 1959990087}
   - component: {fileID: 1959990086}
   - component: {fileID: 1959990085}
+  - component: {fileID: 1959990092}
   - component: {fileID: 1959990084}
   - component: {fileID: 1959990083}
   - component: {fileID: 1959990082}
@@ -42598,9 +42640,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 1.2
-  endReachedDistance: 0.5
+  slowdownDistance: 2
+  pickNextWaypointDist: 0.88
+  endReachedDistance: 1.55
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -42619,7 +42661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   drawGizmos: 1
-  detailedGizmos: 0
+  detailedGizmos: 1
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
@@ -42648,6 +42690,17 @@ MonoBehaviour:
   animator: {fileID: 1959990087}
   body: {fileID: 1959990086}
   enemyPosition: {fileID: 0}
+  player: {fileID: 358337352}
+  enemyAttackBox: {fileID: 915161245}
+  enemyAttackRange: 0.56
+  enemyAttackDamage: 10
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  frontCollider: {fileID: 1959990085}
+  sideCollider: {fileID: 1959990092}
+  attackRate: 0.5
+  path: {fileID: 1959990082}
   maxHealth: 100
 --- !u!60 &1959990085
 PolygonCollider2D:
@@ -42680,11 +42733,11 @@ PolygonCollider2D:
       - {x: 0.078052245, y: -0.2251375}
       - {x: 0.08023846, y: -0.16923103}
       - {x: 0.13721822, y: -0.15806133}
-      - {x: 0.18276083, y: -0.025323713}
+      - {x: 0.17845142, y: -0.029284807}
       - {x: 0.16047436, y: 0.06513307}
-      - {x: 0.18265973, y: 0.10240621}
+      - {x: 0.15649223, y: 0.10240621}
       - {x: 0.14525922, y: 0.12604116}
-      - {x: 0.1462466, y: 0.15833636}
+      - {x: 0.13606885, y: 0.15579192}
       - {x: 0.039445423, y: 0.16679676}
       - {x: 0.0061586685, y: 0.25203165}
       - {x: -0.016117986, y: 0.29941583}
@@ -42704,7 +42757,7 @@ PolygonCollider2D:
       - {x: -0.1862466, y: -0.29319426}
       - {x: -0.053194344, y: -0.29138863}
       - {x: -0.064862564, y: -0.2380523}
-      - {x: -0.037777204, y: -0.121379614}
+      - {x: -0.040341537, y: -0.11147684}
       - {x: -0.013331944, y: -0.2470807}
 --- !u!50 &1959990086
 Rigidbody2D:
@@ -42805,12 +42858,54 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959990080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.48, y: -0.88, z: 0}
+  m_LocalPosition: {x: 6.58, y: -0.97, z: 0}
   m_LocalScale: {x: 2.9357715, y: 2.9357715, z: 2.9357715}
-  m_Children: []
+  m_Children:
+  - {fileID: 915161245}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1959990092
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959990080}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.51, y: 0.59}
+    newSize: {x: 0.51, y: 0.59}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.06057568, y: 0.1605742}
+      - {x: 0.0016513476, y: 0.23368542}
+      - {x: 0.0012266338, y: 0.24076177}
+      - {x: -0.13144913, y: 0.1305152}
+      - {x: -0.14764151, y: -0.136848}
+      - {x: -0.117182456, y: -0.17468531}
+      - {x: -0.1074996, y: -0.23942596}
+      - {x: -0.145747, y: -0.2536409}
+      - {x: -0.146997, y: -0.27647072}
+      - {x: -0.13865553, y: -0.29397842}
+      - {x: 0.10957698, y: -0.29057208}
+      - {x: 0.0930096, y: -0.23278604}
+      - {x: 0.13560359, y: 0.15440066}
+    - - {x: -0.015, y: -0.21499999}
+      - {x: -0.005, y: -0.235}
+      - {x: -0.015, y: -0.24499999}
 --- !u!1 &1961174637
 GameObject:
   m_ObjectHideFlags: 0
@@ -46741,11 +46836,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8760681203449454851, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8659967795733985652, guid: 4d4036b652d254f4ebcf81621165f381, type: 3}
     - target: {fileID: 8760681203449454861, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
       propertyPath: m_Name
       value: ChefFront1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8760681203449454848, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
 --- !u!1 &2144344141
 GameObject:
