@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
-using System;
 
 public class Enemy : MonoBehaviour
 {
     //create rigidbody and animator to be set to the ones on the sprite in the inspector
     public Animator animator;
     public Rigidbody2D body;
+
+    //for tracking and updating enemy position
     public Transform enemyPosition;
-    string direction;
-    string lastDirection;
+    Vector3 startPosition;
+    public AIPath path;
 
     public ChefMovement2 player;
 
+    //attack box to track if player is hit
     public Transform enemyAttackBox;
     //set attack range
     public float enemyAttackRange = .05f;
@@ -22,19 +24,16 @@ public class Enemy : MonoBehaviour
     public int enemyAttackDamage = 10;
     //create layermask to detect enemies hit
     public LayerMask playerLayer;
+    //distance away from player to start attacking, set to a little longer than the path's end reached distance
+    public float attackDistance;
 
     //change colliders based on direction because side view is smaller
     public Collider2D frontCollider;
     public Collider2D sideCollider;
 
-    //used to set attackrate smaller attack rate = slower consecutive attacks, set to .5 to eliminate some ghost attacks/double damage per attack
+    //used to set attackrate smaller attack rate = slower consecutive attacks
     public float attackRate = .5f;
     float nextAttackTime = 0;
-
-    public AIPath path;
-
-    Vector2 startPosition;
-    Vector2 movement;
 
     public int maxHealth = 100;
     int currentHealth;
@@ -53,101 +52,61 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        setDirection();
-        if(lastDirection != direction)
-        {
-            SetAnimations();
-        }
-        lastDirection = direction;
+        SetAnimations();
         startPosition = enemyPosition.position;
-        if (path.reachedDestination && Time.time >= nextAttackTime && !player.isDead)
+        if (path.remainingDistance < attackDistance && Time.time >= nextAttackTime && !player.isDead)
         {
             Attack();
             nextAttackTime = Time.time + 1f / attackRate;
         }
+        else if (Time.time >= nextAttackTime)
+        {
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
     }
 
-    //sets parameters for idle, movement, and attack animations, moves and resizes attack box based on direction, changes collider for front/back or left/right 
+    //sets parameters for idle, movement, and attack animations 
     void SetAnimations()
     {
-        //set idle going to the right side
-        if (enemyPosition.position.x > startPosition.x && Math.Abs(startPosition.x - enemyPosition.position.x) > Math.Abs(startPosition.y - enemyPosition.position.y))
+        if(startPosition != enemyPosition.position)
         {
-            animator.SetFloat("IdleFace", 1f);
+            animator.SetBool("IsWalking", true);
+        }
+        //going to the right side
+        if (enemyPosition.position.x > startPosition.x && Mathf.Abs(startPosition.x - enemyPosition.position.x) > Mathf.Abs(startPosition.y - enemyPosition.position.y))
+        {
             animator.SetFloat("Vertical", 0f);
             animator.SetFloat("Horizontal", 1f);
-            animator.SetFloat("Speed", 1);
             frontCollider.enabled = false;
             sideCollider.enabled = true;
-            enemyAttackBox.localPosition = new Vector3(0.144f, -0.035f, 0f);
-            enemyAttackRange = .62f;
         }
-        else if (enemyPosition.position.x < startPosition.x && Math.Abs(startPosition.x - enemyPosition.position.x) > Math.Abs(startPosition.y - enemyPosition.position.y))
+        else if (enemyPosition.position.x < startPosition.x && Mathf.Abs(startPosition.x - enemyPosition.position.x) > Mathf.Abs(startPosition.y - enemyPosition.position.y))
         {
-            //set idle going to the left side
-            animator.SetFloat("IdleFace", 0.66f);
+            //going to the left side
             animator.SetFloat("Horizontal", -1f);
             animator.SetFloat("Vertical", 0f);
-            animator.SetFloat("Speed", 1);
             frontCollider.enabled = false;
             sideCollider.enabled = true;
-            enemyAttackBox.localPosition = new Vector3(-0.144f, -0.035f, 0f);
-            enemyAttackRange = .62f;
         }
-        else if (enemyPosition.position.y > startPosition.y && Math.Abs(startPosition.y - enemyPosition.position.y) > Math.Abs(startPosition.x - enemyPosition.position.x))
+        else if (enemyPosition.position.y > startPosition.y && Mathf.Abs(startPosition.y - enemyPosition.position.y) > Mathf.Abs(startPosition.x - enemyPosition.position.x))
         {
-            //set idle going up
-            animator.SetFloat("IdleFace", 0.33f);
+            //going up
             animator.SetFloat("Vertical", 1f);
             animator.SetFloat("Horizontal", 0f);
-            animator.SetFloat("Speed", 1);
             frontCollider.enabled = true;
             sideCollider.enabled = false;
-            enemyAttackBox.localPosition = new Vector3(0.007f, 0.121f, 0f);
-            enemyAttackRange = 0.5f;
         }
         else if (enemyPosition.position.y < startPosition.y) 
         {
-            //set idle going down
-            animator.SetFloat("IdleFace", 0f);
+            //going down
             animator.SetFloat("Vertical", -1f);
             animator.SetFloat("Horizontal", 0f);
-            animator.SetFloat("Speed", 1);
             frontCollider.enabled = true;
             sideCollider.enabled = false;
-            enemyAttackBox.localPosition = new Vector3(0.013f, -0.119f, 0f);
-            enemyAttackRange = 0.62f;
         }
         else if (path.reachedEndOfPath)
         {
-            animator.SetFloat("Vertical", 0f);
-            animator.SetFloat("Horizontal", 0f);
-            animator.SetFloat("Speed", 0);
-        }
-    }
-
-    public void setDirection()
-    {
-        //set idle going to the right side
-        if (enemyPosition.position.x > startPosition.x)
-        {
-            direction = "Right";
-        }
-        else if (enemyPosition.position.x < startPosition.x)
-        {
-            direction = "Left";
-        }
-        else if (enemyPosition.position.y > startPosition.y)
-        {
-            direction = "Up";
-        }
-        else if (enemyPosition.position.y < startPosition.y)
-        {
-            direction = "Down";
-        }
-        else
-        {
-            direction = "Idle";
+            animator.SetBool("IsWalking", false);
         }
     }
 
@@ -180,9 +139,7 @@ public class Enemy : MonoBehaviour
 
     void Attack()
     {
-        //matches idle float for correct direction attack animation
-        animator.SetFloat("Attack", animator.GetFloat("IdleFace"));
-        animator.Play("Attack");
+        animator.SetTrigger("Attack");
         //get layer mask containing player(s) hit
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(enemyAttackBox.position, enemyAttackRange, playerLayer);
         //Damage player

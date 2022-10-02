@@ -42642,8 +42642,8 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 2
   pickNextWaypointDist: 0.88
-  endReachedDistance: 1.55
-  alwaysDrawGizmos: 0
+  endReachedDistance: 1.5
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
@@ -42690,17 +42690,18 @@ MonoBehaviour:
   animator: {fileID: 1959990087}
   body: {fileID: 1959990086}
   enemyPosition: {fileID: 0}
+  path: {fileID: 1959990082}
   player: {fileID: 358337352}
   enemyAttackBox: {fileID: 915161245}
-  enemyAttackRange: 0.56
+  enemyAttackRange: 0.62
   enemyAttackDamage: 10
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  attackDistance: 1.51
   frontCollider: {fileID: 1959990085}
   sideCollider: {fileID: 1959990092}
-  attackRate: 0.5
-  path: {fileID: 1959990082}
+  attackRate: 1
   maxHealth: 100
 --- !u!60 &1959990085
 PolygonCollider2D:
@@ -42858,7 +42859,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959990080}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.58, y: -0.97, z: 0}
+  m_LocalPosition: {x: 6.5, y: -0.89, z: 0}
   m_LocalScale: {x: 2.9357715, y: 2.9357715, z: 2.9357715}
   m_Children:
   - {fileID: 915161245}
@@ -46792,6 +46793,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1543680540, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744691273, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744691274, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744691274, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.067
+      objectReference: {fileID: 0}
     - target: {fileID: 8760681203449454850, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -46840,6 +46857,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 8659967795733985652, guid: 4d4036b652d254f4ebcf81621165f381, type: 3}
+    - target: {fileID: 8760681203449454855, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8760681203449454861, guid: 89caccc92bf86dd4fa1c18655233859f, type: 3}
       propertyPath: m_Name
       value: ChefFront1
